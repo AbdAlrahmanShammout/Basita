@@ -2,6 +2,22 @@
 
 @section('content')
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+
+    @if (count($errors) > 0)
+
+    <div class="alert alert-solid-danger alert-bold">
+        @foreach ($errors->all() as $error)
+        <li class="alert-text">{{ $error }}</li>
+        @endforeach
+    </div>
+    @endif
+
+    @if ($message = Session::get('success'))
+    <div class="alert alert-solid-success alert-bold">
+        <div class="alert-text">{{ $message }}</div>
+    </div>
+    @endif
+
     <div class="row">
         <div class="col">
             <div class="alert alert-light alert-elevate fade show" role="alert">
@@ -13,24 +29,6 @@
             </div>
         </div>
     </div>
-
-    @if (count($errors) > 0)
-
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-
-    @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
-        </div>
-    @endif
-
     <!--begin::Portlet-->
     <div class="kt-portlet">
         <div class="kt-portlet__head">
@@ -48,7 +46,8 @@
                 <div class="form-group row">
                     <label class="col-form-label col-lg-3 col-sm-12">service type name</label>
                     <div class="col-lg-6 col-md-9 col-sm-12">
-                        <input type="text" name="name" class="form-control" placeholder="please enter your service type name">
+                        <input type="text" name="name" class="form-control"
+                            placeholder="please enter your service type name">
                     </div>
                 </div>
             </div>
