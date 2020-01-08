@@ -38,8 +38,8 @@
             <div class="kt-portlet__foot">
                 <div class="container">
                     <div class="kt-form__actions kt-align-right">
-                        <button type="reset" class="btn btn-secondary">Cancel</button>
-                        <button type="submit" class="btn btn-wider btn-brand">Submit</button>
+                        <button type="reset" class="btn btn-secondary mx-2">Cancel</button>
+                        <button type="submit" class="btn btn-wider btn-brand mx-2">Submit</button>
                     </div>
                 </div>
             </div>
