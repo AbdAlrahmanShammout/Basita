@@ -8,18 +8,14 @@
                 <div class="kt-portlet__body">
                     <div class="kt-widget kt-widget--user-profile-3">
                         <div class="kt-widget__top">
-                            <div class="kt-widget__media kt-hidden-">
-                                <img src="/metronic/themes/metronic/theme/default/demo1/dist/assets/media/users/100_13.jpg"
-                                    alt="image">
-                            </div>
                             <div
-                                class="kt-widget__pic kt-widget__pic--danger kt-font-danger kt-font-boldest kt-font-light kt-hidden">
-                                JM
+                                class="kt-widget__pic kt-widget__pic--danger kt-font-danger kt-font-boldest kt-font-light">
+                                S1
                             </div>
                             <div class="kt-widget__content">
                                 <div class="kt-widget__head">
                                     <a href="#" class="kt-widget__username">
-                                        Jason Muller
+                                        Service 1
                                         <i class="flaticon2-correct"></i>
                                     </a>
 
@@ -200,7 +196,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($list as $item)
+                    {{-- @foreach($list as $item)
                     <tr>
                         <td>1</td>
                         <td>{{$item->name}}</td>
@@ -222,7 +218,7 @@
                                 <i class="la la-trash"></i>
                             </a></td>
                     </tr>
-                    @endforeach
+                    @endforeach --}}
                 </tbody>
             </table>
 
