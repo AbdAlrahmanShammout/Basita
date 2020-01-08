@@ -20,8 +20,12 @@ Route::get('/login', function () {
     return view('login');
 });
 
-
-
+Route::get('/services-types', function () {
+    return view('servicesTypes.list');
+});
+Route::get('/services-types-create', function () {
+    return view('servicesTypes.create');
+});
 Route::prefix("controlPanelB")->middleware("checkRuleAdmin")->group(function (){
 
     Route::prefix("serviceType")->group(function (){
@@ -34,3 +38,5 @@ Route::prefix("controlPanelB")->middleware("checkRuleAdmin")->group(function (){
     });
 
 });
+
+

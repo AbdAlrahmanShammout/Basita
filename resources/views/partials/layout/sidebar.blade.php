@@ -63,19 +63,19 @@
                                 </g>
                             </svg></span><span class="kt-menu__link-text">Dashboard</span></a></li>
                 <li class="kt-menu__section ">
-                    <h4 class="kt-menu__section-text">Services</h4>
+                    <h4 class="kt-menu__section-text">Services Types</h4>
                     <i class="kt-menu__section-icon flaticon-more-v2"></i>
                 </li>
                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
                     data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
                         class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon"><i
                                 class="flaticon-add-circular-button"></i></span><span class="kt-menu__link-text">Add new
-                            Service</span></a>
+                            Service Type</span></a>
                 </li>
                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
                     data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
                         class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon"><i
-                                class="flaticon-list-2"></i></span><span class="kt-menu__link-text">Services</span></a>
+                                class="flaticon-list-2"></i></span><span class="kt-menu__link-text">View Services Types</span></a>
                 </li>
             </ul>
         </div>

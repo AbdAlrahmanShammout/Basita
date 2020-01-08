@@ -22,29 +22,7 @@ var KTDatatablesBasicBasic = function() {
 
 			// Order settings
 			order: [[1, 'desc']],
-
-			headerCallback: function(thead, data, start, end, display) {
-				thead.getElementsByTagName('th')[0].innerHTML = `
-                    <label class="kt-checkbox kt-checkbox--single kt-checkbox--solid">
-                        <input type="checkbox" value="" class="kt-group-checkable">
-                        <span></span>
-                    </label>`;
-			},
-
 			columnDefs: [
-				{
-					targets: 0,
-					width: '30px',
-					className: 'dt-right',
-					orderable: false,
-					render: function(data, type, full, meta) {
-						return `
-                        <label class="kt-checkbox kt-checkbox--single kt-checkbox--solid">
-                            <input type="checkbox" value="" class="kt-checkable">
-                            <span></span>
-                        </label>`;
-					},
-				},
 				{
 					targets: -1,
 					title: 'Actions',
@@ -67,7 +45,7 @@ var KTDatatablesBasicBasic = function() {
 					},
 				},
 				{
-					targets: 8,
+					targets: 6,
 					render: function(data, type, full, meta) {
 						var status = {
 							1: {'title': 'Pending', 'class': 'kt-badge--brand'},
@@ -85,7 +63,7 @@ var KTDatatablesBasicBasic = function() {
 					},
 				},
 				{
-					targets: 9,
+					targets: 7,
 					render: function(data, type, full, meta) {
 						var status = {
 							1: {'title': 'Online', 'state': 'danger'},

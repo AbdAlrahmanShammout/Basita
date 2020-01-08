@@ -26,6 +26,7 @@
             </div>
         </div>
     </div>
+    
     @include('partials.layout.js')
     @yield('page-level-js')
 
