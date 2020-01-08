@@ -84,7 +84,7 @@ class ServiceTypeController extends Controller
     public function update(Request $request, ServiceType $serviceType)
     {
         $request->validate([
-            'name' => 'required|string|unique:service_types|max:190',
+            'name' => 'required|string|unique:service_types,name,'.$serviceType->id,'|max:190',
         ]);
 
         $serviceType->name = $request->name;
