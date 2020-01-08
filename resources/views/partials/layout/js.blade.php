@@ -23,8 +23,8 @@
 <!-- end::Global Config -->
 
 <!--begin::Global Theme Bundle(used by all pages) -->
-<script src="/plugins/global/plugins.bundle.js" type="text/javascript"></script>
-<script src="/js/scripts.js" type="text/javascript"></script>
+<script src="/assets/plugins/global/plugins.bundle.js" type="text/javascript"></script>
+<script src="/assets/js/scripts.bundle.js" type="text/javascript"></script>
 
 <script src="/js/app.js"></script>
 <!--end::Global Theme Bundle -->
