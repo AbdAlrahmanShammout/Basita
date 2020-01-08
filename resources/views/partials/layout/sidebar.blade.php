@@ -93,7 +93,7 @@
                                         Service Type</span></a>
                             </li>
                             <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                data-ktmenu-submenu-toggle="hover"><a href="{{route('serviceType.index')}}"
                                     class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon"><i
                                             class="flaticon-list-2"></i></span><span class="kt-menu__link-text">View
                                         Services
