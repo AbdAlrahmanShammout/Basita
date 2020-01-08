@@ -42,7 +42,6 @@
                         <td>1</td>
                         <td>{{$item->name}}</td>
                         <td>{{$item->id}}</td>
-                        <td>22</td>
                         <td nowrap>
                             <a href="{{route('serviceType.show',$item->id)}}" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
                                 <i class="la la-eye"></i>
