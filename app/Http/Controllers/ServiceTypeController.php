@@ -17,9 +17,10 @@ class ServiceTypeController extends Controller
     public function index()
     {
         $page = Input::get("page");
-        $per_page = Input::get("per_page");
+        $per_page = Input::get('per_page',8);
+        $list = ServiceType::paginate($per_page);
 
-
+        return view('servicesTypes.list', compact('list'));
 
     }
 

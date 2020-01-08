@@ -26,15 +26,15 @@ Route::get('/services-types', function () {
 Route::get('/services-types-create', function () {
     return view('servicesTypes.create');
 });
-Route::prefix("controlPanelB")->middleware("checkRuleAdmin")->group(function (){
+Route::prefix("controlPanelB")->group(function (){//middleware("checkRuleAdmin")->
 
     Route::prefix("serviceType")->group(function (){
-        Route::get("/","ServiceTypeController@index");
-        Route::get("/create","ServiceTypeController@create");
-        Route::post("/","ServiceTypeController@store");
-        Route::get("/{serviceType}/edit","ServiceTypeController@edit");
-        Route::patch("/{serviceType}","ServiceTypeController@update");
-        Route::delete('/{serviceType}', 'ServiceTypeController@destroy')->name('role.destroy');
+        Route::get("/","ServiceTypeController@index")->name('serviceType.index');
+        Route::get("/create","ServiceTypeController@create")->name('serviceType.create');
+        Route::post("/","ServiceTypeController@store")->name('serviceType.store');
+        Route::get("/{serviceType}/edit","ServiceTypeController@edit")->name('serviceType.edit');
+        Route::patch("/{serviceType}","ServiceTypeController@update")->name('serviceType.update');
+        Route::delete('/{serviceType}', 'ServiceTypeController@destroy')->name('role.destroy')->name('serviceType.delete');
     });
 
 });
