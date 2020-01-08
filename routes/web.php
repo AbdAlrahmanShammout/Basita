@@ -11,9 +11,26 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/login', function () {
     return view('login');
+});
+
+
+
+Route::prefix("controlPanelB")->middleware("checkRuleAdmin")->group(function (){
+
+    Route::prefix("serviceType")->group(function (){
+        Route::get("/","ServiceTypeController@index");
+        Route::get("/create","ServiceTypeController@create");
+        Route::post("/","ServiceTypeController@store");
+        Route::get("/{serviceType}/edit","ServiceTypeController@edit");
+        Route::patch("/{serviceType}","ServiceTypeController@update");
+        Route::delete('/{serviceType}', 'ServiceTypeController@destroy')->name('role.destroy');
+    });
+
 });

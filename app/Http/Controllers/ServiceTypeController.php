@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\ServiceType;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class ServiceTypeController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +16,11 @@ class ServiceTypeController extends Controller
      */
     public function index()
     {
-        //
+        $page = Input::get("page");
+        $per_page = Input::get("per_page");
+
+
+
     }
 
     /**
