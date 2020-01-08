@@ -37,6 +37,7 @@ Route::prefix("controlPanelB")->group(function (){//middleware("checkRuleAdmin")
         Route::delete('/{serviceType}', 'ServiceTypeController@destroy')->name('role.destroy')->name('serviceType.delete');
     });
 
+
 });
 
 
