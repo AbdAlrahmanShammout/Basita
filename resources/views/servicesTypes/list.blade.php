@@ -86,10 +86,11 @@
                     </tr>
                 </thead>
                 <tbody>
+                @foreach($list as $item)
                     <tr>
                         <td>1</td>
-                        <td>61715-075</td>
-                        <td>China</td>
+                        <td>{{$item->name}}</td>
+                        <td>{{$item->id}}</td>
                         <td>Tieba</td>
                         <td>746 Pine View Junction</td>
                         <td>2/12/2018</td>
@@ -97,106 +98,7 @@
                         <td>2</td>
                         <td nowrap></td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>63629-4697</td>
-                        <td>Indonesia</td>
-                        <td>Cihaur</td>
-                        <td>01652 Fulton Trail</td>
-                        <td>8/6/2017</td>
-                        <td>6</td>
-                        <td>3</td>
-                        <td nowrap></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>68084-123</td>
-                        <td>Argentina</td>
-                        <td>Puerto Iguazú</td>
-                        <td>2 Pine View Park</td>
-                        <td>5/26/2016</td>
-                        <td>1</td>
-                        <td>2</td>
-                        <td nowrap></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>67457-428</td>
-                        <td>Indonesia</td>
-                        <td>Talok</td>
-                        <td>3050 Buell Terrace</td>
-                        <td>7/2/2016</td>
-                        <td>1</td>
-                        <td>3</td>
-                        <td nowrap></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>31722-529</td>
-                        <td>Austria</td>
-                        <td>Sankt Andrä-Höch</td>
-                        <td>3038 Trailsway Junction</td>
-                        <td>5/20/2017</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td nowrap></td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>64117-168</td>
-                        <td>China</td>
-                        <td>Rongkou</td>
-                        <td>023 South Way</td>
-                        <td>11/26/2016</td>
-                        <td>5</td>
-                        <td>3</td>
-                        <td nowrap></td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>43857-0331</td>
-                        <td>China</td>
-                        <td>Baiguo</td>
-                        <td>56482 Fairfield Terrace</td>
-                        <td>6/28/2016</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td nowrap></td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>64980-196</td>
-                        <td>Croatia</td>
-                        <td>Vinica</td>
-                        <td>0 Elka Street</td>
-                        <td>8/5/2016</td>
-                        <td>6</td>
-                        <td>1</td>
-                        <td nowrap></td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>0404-0360</td>
-                        <td>Colombia</td>
-                        <td>San Carlos</td>
-                        <td>38099 Ilene Hill</td>
-                        <td>3/31/2017</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td nowrap></td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>0404-0360</td>
-                        <td>Colombia</td>
-                        <td>San Carlos</td>
-                        <td>38099 Ilene Hill</td>
-                        <td>3/31/2017</td>
-                        <td>2</td>
-                        <td>1</td>
-                        <td nowrap></td>
-                    </tr>
-                    
+                @endforeach
                 </tbody>
             </table>
 

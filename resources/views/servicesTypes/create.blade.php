@@ -25,12 +25,13 @@
         </div>
 
         <!--begin::Form-->
-        <form class="kt-form kt-form--label-right">
+        <form class="kt-form kt-form--label-right" method="post" action="{{ route('serviceType.store') }}">
+            @csrf
             <div class="kt-portlet__body">
                 <div class="form-group row">
                     <label class="col-form-label col-lg-3 col-sm-12">service type name</label>
                     <div class="col-lg-6 col-md-9 col-sm-12">
-                        <input type="text" class="form-control" placeholder="please enter your service type name">
+                        <input type="text" name="name" class="form-control" placeholder="please enter your service type name">
                     </div>
                 </div>
             </div>
@@ -38,7 +39,7 @@
                 <div class="container">
                     <div class="kt-form__actions kt-align-right">
                         <button type="reset" class="btn btn-secondary">Cancel</button>
-                        <button type="reset" class="btn btn-wider btn-brand">Submit</button>
+                        <button type="submit" class="btn btn-wider btn-brand">Submit</button>
                     </div>
                 </div>
             </div>

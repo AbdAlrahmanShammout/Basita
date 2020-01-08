@@ -86,7 +86,7 @@
                     <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
                         <ul class="kt-menu__subnav">
                             <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true"
-                                data-ktmenu-submenu-toggle="hover"><a href="javascript:;"
+                                data-ktmenu-submenu-toggle="hover"><a href="{{route('serviceType.create')}}"
                                     class="kt-menu__link kt-menu__toggle"><span class="kt-menu__link-icon"><i
                                             class="flaticon-add-circular-button"></i></span><span
                                         class="kt-menu__link-text">Add new

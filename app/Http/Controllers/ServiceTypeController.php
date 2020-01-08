@@ -31,7 +31,7 @@ class ServiceTypeController extends Controller
      */
     public function create()
     {
-        //
+        return view('servicesTypes.create');
     }
 
     /**
@@ -42,7 +42,8 @@ class ServiceTypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        dd($request->name);
     }
 
     /**
