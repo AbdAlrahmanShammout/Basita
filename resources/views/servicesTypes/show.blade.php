@@ -9,7 +9,7 @@
                     <i class="kt-font-brand flaticon2-line-chart"></i>
                 </span>
                 <h3 class="kt-portlet__head-title">
-                    Services Types
+                    {{$serviceType->name}}
                     <small>list of availabel services types</small>
                 </h3>
             </div>
@@ -42,29 +42,29 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($list as $item)
-                    <tr>
-                        <td>1</td>
-                        <td>{{$item->name}}</td>
-                        <td>{{$item->id}}</td>
-                        <td>Tieba</td>
-                        <td>746 Pine View Junction</td>
-                        <td>2/12/2018</td>
-                        <td>3</td>
-                        <td>2</td>
-                        <td nowrap> <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
-                                <i class="la la-eye"></i>
-                            </a>
-                            <a href="{{route('serviceType.edit',$item->id)}}"
-                                class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit">
-                                <i class="la la-edit"></i>
-                            </a>
-                            <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" data-toggle="modal"
-                                data-target="#deleteModal" title="Delete">
-                                <i class="la la-trash"></i>
-                            </a></td>
-                    </tr>
-                    @endforeach
+                    {{--@foreach($list as $item)--}}
+                    {{--<tr>--}}
+                        {{--<td>1</td>--}}
+                        {{--<td>{{$item->name}}</td>--}}
+                        {{--<td>{{$item->id}}</td>--}}
+                        {{--<td>Tieba</td>--}}
+                        {{--<td>746 Pine View Junction</td>--}}
+                        {{--<td>2/12/2018</td>--}}
+                        {{--<td>3</td>--}}
+                        {{--<td>2</td>--}}
+                        {{--<td nowrap> <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">--}}
+                                {{--<i class="la la-eye"></i>--}}
+                            {{--</a>--}}
+                            {{--<a href="{{route('serviceType.edit',$item->id)}}"--}}
+                                {{--class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit">--}}
+                                {{--<i class="la la-edit"></i>--}}
+                            {{--</a>--}}
+                            {{--<a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" data-toggle="modal"--}}
+                                {{--data-target="#deleteModal" title="Delete">--}}
+                                {{--<i class="la la-trash"></i>--}}
+                            {{--</a></td>--}}
+                    {{--</tr>--}}
+                    {{--@endforeach--}}
                 </tbody>
             </table>
 
