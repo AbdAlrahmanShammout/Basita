@@ -30,14 +30,9 @@
             <table class="table table-striped table-hover table-checkable" id="kt_table_1">
                 <thead>
                     <tr>
-                        <th>Record ID</th>
-                        <th>Order ID</th>
-                        <th>Country</th>
-                        <th>Ship City</th>
-                        <th>Ship Address</th>
-                        <th>Ship Date</th>
-                        <th>Status</th>
-                        <th>Type</th>
+                        <th>ID</th>
+                        <th>Service Name</th>
+                        <th>Count Provider</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -47,12 +42,9 @@
                         <td>1</td>
                         <td>{{$item->name}}</td>
                         <td>{{$item->id}}</td>
-                        <td>Tieba</td>
-                        <td>746 Pine View Junction</td>
-                        <td>2/12/2018</td>
-                        <td>3</td>
-                        <td>2</td>
-                        <td nowrap> <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
+                        <td>22</td>
+                        <td nowrap>
+                            <a href="{{route('serviceType.show',$item->id)}}" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
                                 <i class="la la-eye"></i>
                             </a>
                             <a href="{{route('serviceType.edit',$item->id)}}"
@@ -62,7 +54,8 @@
                             <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" data-toggle="modal"
                                 data-target="#deleteModal" title="Delete">
                                 <i class="la la-trash"></i>
-                            </a></td>
+                            </a>
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>

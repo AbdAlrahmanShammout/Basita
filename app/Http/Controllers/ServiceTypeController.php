@@ -60,7 +60,7 @@ class ServiceTypeController extends Controller
      */
     public function show(ServiceType $serviceType)
     {
-
+        return view('servicesTypes.show',compact('serviceType'));
     }
 
     /**
@@ -83,7 +83,13 @@ class ServiceTypeController extends Controller
      */
     public function update(Request $request, ServiceType $serviceType)
     {
-        dd("updated");
+        $request->validate([
+            'name' => 'required|string|unique:service_types|max:190',
+        ]);
+
+        $serviceType->name = $request->name;
+        $serviceType->save();
+        return back()->with('success', 'Service Type updated successfully.');
     }
 
     /**
