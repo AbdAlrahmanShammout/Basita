@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\ServiceType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Validator;
 
 class ServiceTypeController extends Controller
 {
@@ -16,12 +17,9 @@ class ServiceTypeController extends Controller
      */
     public function index()
     {
-        $page = Input::get("page");
-        $per_page = Input::get('per_page',8);        
+        $per_page = Input::get('per_page',8);
         $list = ServiceType::paginate($per_page);
-
         return view('servicesTypes.list', compact('list'));
-
     }
 
     /**
@@ -43,7 +41,15 @@ class ServiceTypeController extends Controller
     public function store(Request $request)
     {
 
-        dd($request->name);
+        $request->validate([
+            'name' => 'required|string|unique:service_types|max:190',
+        ]);
+
+        $serviceType = new ServiceType();
+        $serviceType->name = $request->name;
+        $serviceType->save();
+        return back()->with('success', 'Service Type created successfully.');
+//        return redirect()->route('serviceType.index');
     }
 
     /**
@@ -54,7 +60,7 @@ class ServiceTypeController extends Controller
      */
     public function show(ServiceType $serviceType)
     {
-        //
+
     }
 
     /**
