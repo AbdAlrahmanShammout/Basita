@@ -47,14 +47,9 @@
                 style="background-image: url(assets/media/bg/bg-1.jpg);">
                 <div class="kt-grid__item kt-grid__item--fluid kt-login__wrapper">
                     <div class="kt-login__container">
-                        <div class="kt-login__logo">
-                            <a href="#">
-                                <img src="assets/media/logos/logo-mini-2-md.png">
-                            </a>
-                        </div>
-                        <div class="kt-login__signin">
+                          <div class="kt-login__signin">
                             <div class="kt-login__head">
-                                <h3 class="kt-login__title">Sign In To Admin</h3>
+                                <h3 class="kt-login__title">Sign In To Basita</h3>
                             </div>
                             <form class="kt-form" action="">
                                 <div class="input-group">
