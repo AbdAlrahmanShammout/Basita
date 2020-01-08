@@ -55,17 +55,47 @@
                         <td nowrap> <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
                                 <i class="la la-eye"></i>
                             </a>
-                            <a href="{{route('serviceType.edit',$item->id)}}" class="btn btn-sm btn-clean btn-icon btn-icon-md"
-                                title="Edit">
+                            <a href="{{route('serviceType.edit',$item->id)}}"
+                                class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit">
                                 <i class="la la-edit"></i>
                             </a>
-                            <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Delete">
+                            <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" data-toggle="modal"
+                                data-target="#deleteModal" title="Delete">
                                 <i class="la la-trash"></i>
                             </a></td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
+
+            <!--begin::Modal-->
+            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-danger id=" exampleModalLabel">Delete Service Type</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Are you sude you want to delete this service type ?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <form class="kt-form kt-form--label-right" method="delete"
+                                {{-- action="{{ route('serviceType.delete',$serviceType->id)}}"> --}}
+                                @csrf
+                                <button type="reset" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-danger btn-wide">Delete</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--end::Modal-->
+
 
             <!--end: Datatable -->
         </div>
