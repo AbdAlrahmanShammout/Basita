@@ -22,23 +22,24 @@ var KTDatatablesBasicBasic = (function() {
             // Order settings
             order: [[1, "desc"]],
             columnDefs: [
-                {
-                    targets: -1,
-                    title: "Actions",
-                    orderable: false,
-                    render: function(data, type, full, meta) {
-                        return `
-                        <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
-                          <i class="la la-eye"></i>
-						</a>
-							<a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
-							<i class="la la-edit"></i>
-					  	</a>
-					  	<a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
-					  		<i class="la la-trash"></i>
-						</a>`;
-                    }
-                },
+                // {
+                //     targets: -1,
+                //     title: "Actions",
+                //     orderable: false,
+                //     render: function(data, type, full, meta) {
+                //         console.log(data,type,full,meta)
+                //         return `
+                //         <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
+                //           <i class="la la-eye"></i>
+				// 		</a>
+				// 			<a href="{{route('serviceType.edit)}}" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit">
+				// 			<i class="la la-edit"></i>
+				// 	  	</a>
+				// 	  	<a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Delete">
+				// 	  		<i class="la la-trash"></i>
+				// 		</a>`;
+                //     }
+                // },
                 {
                     targets: 2,
                     render: function(data, type, full, meta) {

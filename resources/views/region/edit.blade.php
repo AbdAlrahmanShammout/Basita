@@ -31,7 +31,7 @@
                 <div class="form-group row">
                     <label class="col-form-label col-lg-3 col-sm-12">service type name</label>
                     <div class="col-lg-6 col-md-9 col-sm-12">
-                        <input type="text" name="name" class="form-control" placeholder="please enter your service type name">
+                        <input type="text" name="name" class="form-control" value="{{$serviceType -> name}}" placeholder="please enter your service type name">
                     </div>
                 </div>
             </div>

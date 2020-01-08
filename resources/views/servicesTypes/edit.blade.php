@@ -25,21 +25,23 @@
         </div>
 
         <!--begin::Form-->
-        <form class="kt-form kt-form--label-right" method="post" action="{{ route('serviceType.store') }}">
+        <form class="kt-form kt-form--label-right" method="POST"
+            action="{{ route('serviceType.update',$serviceType->id)}}">
             @csrf
             <div class="kt-portlet__body">
                 <div class="form-group row">
                     <label class="col-form-label col-lg-3 col-sm-12">service type name</label>
                     <div class="col-lg-6 col-md-9 col-sm-12">
-                        <input type="text" name="name" class="form-control" value="{{$serviceType -> name}}" placeholder="please enter your service type name">
+                        <input type="text" name="name" class="form-control" value="{{$serviceType->name}}"
+                            placeholder="please enter your service type name">
                     </div>
                 </div>
             </div>
             <div class="kt-portlet__foot">
                 <div class="container">
                     <div class="kt-form__actions kt-align-right">
-                        <button type="reset" class="btn btn-secondary">Cancel</button>
-                        <button type="submit" class="btn btn-wider btn-brand">Submit</button>
+                        <button type="reset" class="btn btn-secondary mx-2">Cancel</button>
+                        <button type="submit" class="btn btn-wider btn-brand mx-2">Update Changes</button>
                     </div>
                 </div>
             </div>
