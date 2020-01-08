@@ -15,7 +15,7 @@
                             <div class="kt-widget__content">
                                 <div class="kt-widget__head">
                                     <a href="#" class="kt-widget__username">
-                                        Service 1
+                                        {{$serviceType->name}}
                                         <i class="flaticon2-correct"></i>
                                     </a>
 
@@ -36,19 +36,6 @@
                                     <div class="kt-widget__desc">
                                         I distinguish three main text objektive could be merely to inform people.
                                         <br> A second could be persuade people.You want people to bay objective
-                                    </div>
-                                    <div class="kt-widget__progress">
-                                        <div class="kt-widget__text">
-                                            Progress
-                                        </div>
-                                        <div class="progress" style="height: 5px;width: 100%;">
-                                            <div class="progress-bar kt-bg-success" role="progressbar"
-                                                style="width: 65%;" aria-valuenow="65" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                        <div class="kt-widget__stats">
-                                            78%
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -103,53 +90,6 @@
                                     <a href="#" class="kt-widget__value kt-font-brand">View</a>
                                 </div>
                             </div>
-
-                            <div class="kt-widget__item">
-                                <div class="kt-widget__icon">
-                                    <i class="flaticon-network"></i>
-                                </div>
-                                <div class="kt-widget__details">
-                                    <div class="kt-section__content kt-section__content--solid">
-                                        <div class="kt-media-group">
-                                            <a href="#" class="kt-media kt-media--sm kt-media--circle"
-                                                data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title=""
-                                                data-original-title="John Myer">
-                                                <img src="/metronic/themes/metronic/theme/default/demo1/dist/assets/media/users/100_1.jpg"
-                                                    alt="image">
-                                            </a>
-                                            <a href="#" class="kt-media kt-media--sm kt-media--circle"
-                                                data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title=""
-                                                data-original-title="Alison Brandy">
-                                                <img src="/metronic/themes/metronic/theme/default/demo1/dist/assets/media/users/100_10.jpg"
-                                                    alt="image">
-                                            </a>
-                                            <a href="#" class="kt-media kt-media--sm kt-media--circle"
-                                                data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title=""
-                                                data-original-title="Selina Cranson">
-                                                <img src="/metronic/themes/metronic/theme/default/demo1/dist/assets/media/users/100_11.jpg"
-                                                    alt="image">
-                                            </a>
-                                            <a href="#" class="kt-media kt-media--sm kt-media--circle"
-                                                data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title=""
-                                                data-original-title="Luke Walls">
-                                                <img src="/metronic/themes/metronic/theme/default/demo1/dist/assets/media/users/100_2.jpg"
-                                                    alt="image">
-                                            </a>
-                                            <a href="#" class="kt-media kt-media--sm kt-media--circle"
-                                                data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title=""
-                                                data-original-title="Micheal York">
-                                                <img src="/metronic/themes/metronic/theme/default/demo1/dist/assets/media/users/100_3.jpg"
-                                                    alt="image">
-                                            </a>
-                                            <a href="#" class="kt-media kt-media--sm kt-media--circle"
-                                                data-toggle="kt-tooltip" data-skin="brand" data-placement="top" title=""
-                                                data-original-title="Micheal York">
-                                                <span>+3</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -163,19 +103,9 @@
                     <i class="kt-font-brand flaticon2-line-chart"></i>
                 </span>
                 <h3 class="kt-portlet__head-title">
-                    {{$serviceType->name}}
+                    {{$serviceType->name}} Providers
                     <small>list of availabel services types</small>
                 </h3>
-            </div>
-            <div class="kt-portlet__head-toolbar">
-                <div class="kt-portlet__head-wrapper">
-                    <div class="kt-portlet__head-actions">
-                        <a href="{{route('serviceType.create')}}" class="btn btn-brand btn-elevate btn-icon-sm">
-                            <i class="la la-plus"></i>
-                            New Record
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="kt-portlet__body">
