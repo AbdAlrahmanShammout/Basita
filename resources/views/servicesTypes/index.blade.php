@@ -76,12 +76,12 @@
                         </div>
                         <div class="modal-footer">
                             <form class="kt-form kt-form--label-right" method="delete"
+                                
                                 {{-- action="{{ route('serviceType.delete',$serviceType->id)}}"> --}}
                                 @csrf
                                 <button type="reset" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                 <button type="submit" class="btn btn-danger btn-wide">Delete</button>
                             </form>
-
                         </div>
                     </div>
                 </div>
