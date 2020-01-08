@@ -32,6 +32,7 @@ Route::prefix("controlPanelB")->group(function (){//middleware("checkRuleAdmin")
         Route::get("/","ServiceTypeController@index")->name('serviceType.index');
         Route::get("/create","ServiceTypeController@create")->name('serviceType.create');
         Route::post("/","ServiceTypeController@store")->name('serviceType.store');
+        Route::get("/{serviceType}","ServiceTypeController@store")->name('serviceType.show');
         Route::get("/{serviceType}/edit","ServiceTypeController@edit")->name('serviceType.edit');
         Route::patch("/{serviceType}","ServiceTypeController@update")->name('serviceType.update');
         Route::delete('/{serviceType}', 'ServiceTypeController@destroy')->name('role.destroy')->name('serviceType.delete');
