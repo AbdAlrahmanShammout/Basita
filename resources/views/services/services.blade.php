@@ -1,5 +1,5 @@
 @extends('partials.master')
 
 @section('content')
-<h2>HOMEPAGE</h2>
+<h2>view Services</h2>
 @endsection

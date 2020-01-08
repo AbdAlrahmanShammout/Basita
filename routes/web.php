@@ -17,3 +17,6 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('login');
 });
+Route::get('/services', function () {
+    return view('services.services');
+});
