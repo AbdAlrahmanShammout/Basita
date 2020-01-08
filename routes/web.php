@@ -17,6 +17,11 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('login');
 });
-Route::get('/services', function () {
-    return view('services.services');
+Route::get('/services-types', function () {
+    return view('servicesTypes.list');
 });
+Route::get('/services-types-create', function () {
+    return view('servicesTypes.create');
+});
+
+

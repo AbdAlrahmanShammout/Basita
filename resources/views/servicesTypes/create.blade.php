@@ -2,15 +2,6 @@
 
 @section('content')
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
-    <div class="alert alert-light alert-elevate" role="alert">
-        <div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
-        <div class="alert-text">
-            The Metronic Datatable component supports initialization from HTML table. It also defines the schema model
-            of the data source. In addition to the visualization, the Datatable
-            provides built-in support for operations over data such
-            as sorting, filtering and paging performed in user browser(frontend).
-        </div>
-    </div>
     <div class="kt-portlet kt-portlet--mobile">
         <div class="kt-portlet__head kt-portlet__head--lg">
             <div class="kt-portlet__head-label">
