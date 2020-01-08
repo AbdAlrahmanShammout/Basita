@@ -25,8 +25,9 @@
         </div>
 
         <!--begin::Form-->
-        <form class="kt-form kt-form--label-right" method="POST"
-            action="{{ route('serviceType.update',$serviceType->id)}}">
+        <form class="kt-form kt-form--label-right" method="post" action="{{ route('serviceType.update',$serviceType->id)}}">
+            @method('patch')
+
             @csrf
             <div class="kt-portlet__body">
                 <div class="form-group row">
