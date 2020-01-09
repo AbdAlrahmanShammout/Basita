@@ -99,6 +99,7 @@ class CityController extends Controller
      */
     public function destroy(City $city)
     {
+        // dd("tetasda");
         $city->delete();
         return back()->with('success', 'City delete successfully.');
     }
