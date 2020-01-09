@@ -51,7 +51,7 @@
                             <div class="kt-login__head">
                                 <h3 class="kt-login__title">Sign In To Basita</h3>
                             </div>
-                            <form class="kt-form" action="">
+                            <form class="kt-form" action="{{route('Auth.login')}}">
                                 <div class="input-group">
                                     <input class="form-control" type="text" placeholder="Email" name="email"
                                         autocomplete="off">
@@ -82,7 +82,7 @@
                                 <h3 class="kt-login__title">Sign Up</h3>
                                 <div class="kt-login__desc">Enter your details to create your account:</div>
                             </div>
-                            <form class="kt-login__form kt-form" action="">
+                            <form class="kt-login__form kt-form" action="{{route('Auth.showRegistrationForm')}}">
                                 <div class="input-group">
                                     <input class="form-control" type="text" placeholder="Fullname" name="fullname">
                                 </div>
