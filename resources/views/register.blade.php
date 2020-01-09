@@ -63,10 +63,10 @@
                                 <div class="row form-group mb-0">
                                     <div class="col-lg-6">
                                         <input class="form-control" type="text" placeholder="first name"
-                                            name="first-name" autocomplete="false">
+                                            name="first_name" autocomplete="false">
                                     </div>
                                     <div class="col-lg-6">
-                                        <input class="form-control" type="text" placeholder="last name" name="last-name"
+                                        <input class="form-control" type="text" placeholder="last name" name="last_name"
                                             autocomplete="false">
                                     </div>
                                 </div>
@@ -78,25 +78,25 @@
                                 </div>
                                 <div class="row form-group mb-0">
                                     <div class="col-lg-6">
-                                        <select class="kt-selectpicker form-control p-0 mb-0" title="Gender">
+                                        <select class="kt-selectpicker form-control p-0 mb-0" name="gender" title="Gender">
                                             <option>male</option>
                                             <option>female</option>
                                         </select> </div>
                                     <div class="col-lg-6">
                                         <input type="text" class="form-control" id="birth_datepicker" readonly
-                                            placeholder="Birth Date" /> </div>
+                                            placeholder="Birth Date" name="birthday" /> </div>
                                 </div>
 
                                 <div class="row form-group mb-0">
                                     <div class="col-12">
                                         <input class="form-control" type="text" placeholder="phone number"
-                                            name="phone-number" autocomplete="false">
+                                            name="mobile_number" autocomplete="false">
                                     </div>
                                 </div>
 
                                 <div class="row form-group mb-0">
                                     <div class="col-lg-6">
-                                        <select class="form-control kt-selectpicker p-0" id="selectUser" name="city_id"
+                                        <select class="form-control kt-selectpicker p-0" name="city_id"
                                             title="Please select city" required focus>
                                             @foreach($listCities as $city)
                                             <option value="{{$city->id}}">{{ $city->name }}</option>
@@ -104,7 +104,7 @@
                                         </select>
                                     </div>
                                     <div class="col-lg-6">
-                                        <select class="form-control kt-selectpicker p-0" id="selectUser" name="city_id"
+                                        <select class="form-control kt-selectpicker p-0" name="region_id"
                                             title="Please select region" required focus>
                                             @foreach($listRegions as $region)
                                             <option value="{{$region->id}}">{{ $region->name }}</option>
