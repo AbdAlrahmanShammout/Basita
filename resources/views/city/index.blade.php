@@ -4,6 +4,23 @@
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
     <div class="kt-portlet kt-portlet--mobile">
         <div class="kt-portlet__head kt-portlet__head--lg">
+
+
+            @if (count($errors) > 0)
+
+                <div class="alert alert-solid-danger alert-bold">
+                    @foreach ($errors->all() as $error)
+                        <li class="alert-text">{{ $error }}</li>
+                    @endforeach
+                </div>
+            @endif
+
+            @if ($message = Session::get('success'))
+                <div class="alert alert-solid-success alert-bold">
+                    <div class="alert-text">{{ $message }}</div>
+                </div>
+            @endif
+
             <div class="kt-portlet__head-label">
                 <span class="kt-portlet__head-icon">
                     <i class="kt-font-brand flaticon2-line-chart"></i>

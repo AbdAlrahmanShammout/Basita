@@ -107,5 +107,6 @@ class RegionController extends Controller
     public function destroy(Region $region)
     {
         $region->delete();
+        return back()->with('success', 'Region delete successfully.');
     }
 }

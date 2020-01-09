@@ -13,6 +13,21 @@
                     <small>list of availabel services types</small>
                 </h3>
             </div>
+            @if (count($errors) > 0)
+
+                <div class="alert alert-solid-danger alert-bold">
+                    @foreach ($errors->all() as $error)
+                        <li class="alert-text">{{ $error }}</li>
+                    @endforeach
+                </div>
+            @endif
+
+            @if ($message = Session::get('success'))
+                <div class="alert alert-solid-success alert-bold">
+                    <div class="alert-text">{{ $message }}</div>
+                </div>
+            @endif
+
             <div class="kt-portlet__head-toolbar">
                 <div class="kt-portlet__head-wrapper">
                     <div class="kt-portlet__head-actions">

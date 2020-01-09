@@ -102,5 +102,6 @@ class ServiceTypeController extends Controller
     public function destroy(ServiceType $serviceType)
     {
         $serviceType->delete();
+        return back()->with('success', 'ServiceType delete successfully.');
     }
 }
