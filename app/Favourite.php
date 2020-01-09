@@ -15,6 +15,8 @@ class Favourite extends Model
     protected $primaryKey = "id";
 
     public $timestamps = true;
+
+
 }
 
 

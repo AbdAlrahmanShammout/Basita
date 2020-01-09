@@ -15,4 +15,13 @@ class Rate extends Model
     protected $primaryKey = "id";
 
     public $timestamps = true;
+
+    public function user(){
+        return $this->belongsTo("App\User", "user_id");
+    }
+
+    public function service(){
+        return $this->belongsTo("App\Service", "service_id");
+    }
+
 }

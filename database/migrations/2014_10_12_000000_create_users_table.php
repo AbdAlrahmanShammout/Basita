@@ -21,8 +21,8 @@ class CreateUsersTable extends Migration
             $table->enum('gender', ["male","female"]);
             $table->date('birthday');
             $table->string('mobile_number', 10);
-            $table->bigInteger('city_id');
-            $table->bigInteger('region_id');
+            $table->bigInteger('city_id')->unsigned();
+            $table->bigInteger('region_id')->unsigned();
             $table->text('img_profile');
             $table->string('password');
             $table->string('activity_code');
@@ -30,6 +30,17 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
+
+            $table->foreign('city_id')
+                ->references('id')
+                ->on('cities')
+                ->onDelete('cascade');
+
+            $table->foreign('region_id')
+                ->references('id')
+                ->on('cities')
+                ->onDelete('cascade');
+
         });
     }
 

@@ -15,4 +15,13 @@ class Region extends Model
     protected $primaryKey = "id";
 
     public $timestamps = true;
+
+    public function users(){
+        return $this->hasMany("App\User", "city_id");
+    }
+
+    public function services(){
+        return $this->belongsToMany("App\Service","service_region", "region_id")->orderBy('name_en');
+    }
+
 };

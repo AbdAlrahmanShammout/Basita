@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ServiceType extends Model
+class Day extends Model
 {
-    protected $table = "service_types";
+    protected $table = "dayes";
 
     protected $fillable = [
         'id',  'name',
@@ -16,7 +16,8 @@ class ServiceType extends Model
 
     public $timestamps = true;
 
+
     public function services(){
-        return $this->hasMany("App\Service", "type_service_id");
+        return $this->belongsToMany("App\Service","service_dayes", "day_id")->orderBy('name_en');
     }
 }

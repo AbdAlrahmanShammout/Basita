@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVotesTable extends Migration
+class CreateServiceRegionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,23 +13,21 @@ class CreateVotesTable extends Migration
      */
     public function up()
     {
-        Schema::create('votes', function (Blueprint $table) {
+        Schema::create('service_region', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('comment_id')->unsigned();
-            $table->bigInteger('user_id')->unsigned();
-            $table->enum('status', ["UP", "DOWN"]);
+            $table->bigInteger('service_id')->unsigned();
+            $table->bigInteger('region_id')->unsigned();
             $table->timestamps();
 
-            $table->foreign('user_id')
+            $table->foreign('region_id')
                 ->references('id')
-                ->on('users')
+                ->on('cities')
                 ->onDelete('cascade');
 
-            $table->foreign('comment_id')
+            $table->foreign('service_id')
                 ->references('id')
-                ->on('comments')
+                ->on('services')
                 ->onDelete('cascade');
-
         });
     }
 
@@ -40,6 +38,6 @@ class CreateVotesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('votes');
+        Schema::dropIfExists('service_region');
     }
 }

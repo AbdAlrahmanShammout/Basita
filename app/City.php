@@ -15,5 +15,10 @@ class City extends Model
     protected $primaryKey = "id";
 
     public $timestamps = true;
+
+    public function users(){
+        return $this->hasMany("App\User", "city_id");
+    }
+
 }
 
