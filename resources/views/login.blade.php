@@ -109,9 +109,8 @@
                                     <div class="col-lg-6">
                                         <select class="kt-selectpicker form-control p-0 mb-0"
                                             title="Gender">
-                                            <option>Mustard</option>
-                                            <option>Ketchup</option>
-                                            <option>Relish</option>
+                                            <option>male</option>
+                                            <option>female</option>
                                         </select> </div>
                                     <div class="col-lg-6">
                                         <input type="text" class="form-control" id="birth_datepicker" readonly placeholder="Birth Date" />          </div>
