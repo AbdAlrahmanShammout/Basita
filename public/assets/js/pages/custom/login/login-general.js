@@ -13,6 +13,7 @@ var KTLoginGeneral = (function() {
         init: function() {
             $(".kt-selectpicker").selectpicker();
             $("#birth_datepicker").datepicker({
+                format: 'yyyy-mm-dd',
                 todayHighlight: true,
                 orientation: "bottom left",
                 templates: arrows
