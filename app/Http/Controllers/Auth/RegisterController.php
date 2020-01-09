@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
@@ -17,6 +18,7 @@ use Illuminate\Validation\Rule;
 
 class RegisterController extends Controller
 {
+
 
     /**
      * Show the application registration form.
@@ -49,6 +51,10 @@ class RegisterController extends Controller
     }
 
 
+    protected function guard()
+    {
+        return Auth::guard();
+    }
 
     /**
      * Handle a registration request for the application.
@@ -64,7 +70,7 @@ class RegisterController extends Controller
             'first_name' => 'required|string|max:190',
             'last_name' => 'required|string|max:190',
             'gender' => 'required',Rule::in(['male', 'female']),
-            'email' => 'required|string|max:190',
+            'email' => 'required|string|max:190|unique:users',
             'birthday' => 'required|date',
             'mobile_number' => ['required', 'numeric', 'digits:10', 'unique:users'],
             'city_id' => 'exists:cities,id',
