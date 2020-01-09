@@ -30,12 +30,12 @@
                 visibility: hidden;
             }
         }
-        .btn.dropdown-toggle { 
+
+        .btn.dropdown-toggle {
             background: transparent !important;
             color: white !important;
             height: 46px;
         }
-
     </style>
 </head>
 
@@ -107,13 +107,20 @@
                                 </div>
                                 <div class="row form-group">
                                     <div class="col-lg-6">
-                                        <select class="kt-selectpicker form-control p-0 mb-0"
-                                            title="Gender">
+                                        <select class="kt-selectpicker form-control p-0 mb-0" title="Gender">
                                             <option>male</option>
                                             <option>female</option>
                                         </select> </div>
                                     <div class="col-lg-6">
-                                        <input type="text" class="form-control" id="birth_datepicker" readonly placeholder="Birth Date" />          </div>
+                                        <input type="text" class="form-control" id="birth_datepicker" readonly
+                                            placeholder="Birth Date" /> </div>
+                                </div>
+                                
+                                <div class="row form-group">
+                                    <div class="col-12">
+                                        <input class="form-control" type="text" placeholder="phone number" name="phone-number"
+                                            autocomplete="off">
+                                    </div>
                                 </div>
 
                                 <div class="input-group">
