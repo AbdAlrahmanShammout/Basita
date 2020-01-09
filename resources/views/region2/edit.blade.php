@@ -57,9 +57,9 @@
                     <label class="col-form-label col-lg-3 col-sm-12">region city</label>
                     <div class="col-lg-6 col-md-9 col-sm-12">
                         <select class="form-control selectpicker" id="selectUser" name="city_id"
-                            title="Please select city" required focus>
+                            required focus>
                             @foreach($cities as $city)
-                            <option value="{{$city->id}}">{{ $city->name }}</option>
+                            <option selected="{{$city->id == $region->city_id}} value="{{$city->id}}">{{ $city->name }}</option>
                             @endforeach
                         </select>
                     </div>
