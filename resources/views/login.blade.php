@@ -30,6 +30,12 @@
                 visibility: hidden;
             }
         }
+
+        .btn.dropdown-toggle {
+            background: transparent !important;
+            color: white !important;
+            height: 46px;
+        }
     </style>
 </head>
 
@@ -47,7 +53,7 @@
                 style="background-image: url(assets/media/bg/bg-1.jpg);">
                 <div class="kt-grid__item kt-grid__item--fluid kt-login__wrapper">
                     <div class="kt-login__container">
-                          <div class="kt-login__signin">
+                        <div class="kt-login__signin">
                             <div class="kt-login__head">
                                 <h3 class="kt-login__title">Sign In To Basita</h3>
                             </div>
@@ -79,17 +85,44 @@
                         </div>
                         <div class="kt-login__signup">
                             <div class="kt-login__head">
-                                <h3 class="kt-login__title">Sign Up</h3>
+                                <h3 class="kt-login__title">Create Account For Basita</h3>
                                 <div class="kt-login__desc">Enter your details to create your account:</div>
                             </div>
                             <form class="kt-login__form kt-form" action="{{route('Auth.showRegistrationForm')}}">
-                                <div class="input-group">
-                                    <input class="form-control" type="text" placeholder="Fullname" name="fullname">
+                                <div class="row form-group">
+                                    <div class="col-lg-6">
+                                        <input class="form-control" type="text" placeholder="first name"
+                                            name="first-name" autocomplete="off">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input class="form-control" type="text" placeholder="last name" name="last-name"
+                                            autocomplete="off">
+                                    </div>
                                 </div>
-                                <div class="input-group">
-                                    <input class="form-control" type="text" placeholder="Email" name="email"
-                                        autocomplete="off">
+                                <div class="row form-group">
+                                    <div class="col-12">
+                                        <input class="form-control" type="text" placeholder="Email" name="email"
+                                            autocomplete="off">
+                                    </div>
                                 </div>
+                                <div class="row form-group">
+                                    <div class="col-lg-6">
+                                        <select class="kt-selectpicker form-control p-0 mb-0" title="Gender">
+                                            <option>male</option>
+                                            <option>female</option>
+                                        </select> </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" class="form-control" id="birth_datepicker" readonly
+                                            placeholder="Birth Date" /> </div>
+                                </div>
+                                
+                                <div class="row form-group">
+                                    <div class="col-12">
+                                        <input class="form-control" type="text" placeholder="phone number" name="phone-number"
+                                            autocomplete="off">
+                                    </div>
+                                </div>
+
                                 <div class="input-group">
                                     <input class="form-control" type="password" placeholder="Password" name="password">
                                 </div>

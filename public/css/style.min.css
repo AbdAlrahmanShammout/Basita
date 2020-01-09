@@ -6,7 +6,25 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.1); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5d78ff; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5d78ff; 
+}
 :root {
   --blue: #007bff;
   --indigo: #6610f2;

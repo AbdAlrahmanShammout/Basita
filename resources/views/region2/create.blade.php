@@ -43,15 +43,6 @@
         <form class="kt-form kt-form--label-right" method="post" action="{{ route('region.store') }}">
             @csrf
 
-            <div class="form-group row">
-                <div class="col-sm-8">
-                    <select class="form-control" id="selectUser" name="city_id" required focus>
-                        <option value="" disabled selected>Please select user</option>
-                        @foreach($listCites as $city)
-                            <option value="{{$city->id}}">{{ $city->name }}</option>
-                        @endforeach
-                    </select>
-                </div>
 
             <div class="kt-portlet__body">
                 <div class="form-group row">
@@ -61,15 +52,25 @@
                             placeholder="please enter your service type name">
                     </div>
                 </div>
-            </div>
-            <div class="kt-portlet__foot">
-                <div class="container">
-                    <div class="kt-form__actions kt-align-right">
-                        <button type="reset" class="btn btn-secondary mx-2">Cancel</button>
-                        <button type="submit" class="btn btn-wider btn-brand mx-2">Submit</button>
+                <div class="form-group row">
+                    <label class="col-form-label col-lg-3 col-sm-12">region city</label>
+                    <div class="col-lg-6 col-md-9 col-sm-12">
+                        <select class="form-control selectpicker" id="selectUser" name="city_id"
+                            title="Please select city" required focus>
+                            @foreach($listCites as $city)
+                            <option value="{{$city->id}}">{{ $city->name }}</option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
-            </div>
+                <div class="kt-portlet__foot">
+                    <div class="container">
+                        <div class="kt-form__actions kt-align-right">
+                            <button type="reset" class="btn btn-secondary mx-2">Cancel</button>
+                            <button type="submit" class="btn btn-wider btn-brand mx-2">Submit</button>
+                        </div>
+                    </div>
+                </div>
         </form>
 
         <!--end::Form-->
@@ -78,4 +79,16 @@
     <!--end::Portlet-->
 
 </div>
+@endsection
+
+@section('page-level-js')
+<script>
+    $(document).ready(function () {
+        $(".selectpicker").selectpicker();
+        $(".bootstrap-select").on('click',function () {
+            console.log("teasdsad")
+         $(this).addClass("open");
+    });
+  });
+</script>
 @endsection
