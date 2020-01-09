@@ -58,6 +58,7 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
 
+
         $request->validate([
             'first_name' => 'required|string|max:190',
             'last_name' => 'required|string|max:190',
@@ -81,7 +82,9 @@ class RegisterController extends Controller
             'mobile_number' => $request['mobile_number'],
             'city_id' => $request['city_id'],
             'region_id' => $request['region_id'],
+            'img_profile' =>'img path',
             'password' => Hash::make($request['password']),
+            'activity_code' => 53795,
         ]);
 
 

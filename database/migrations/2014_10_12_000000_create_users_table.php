@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->text('img_profile')->default("img path");
             $table->string('password');
             $table->string('activity_code');
-            $table->integer('rule');
+            $table->integer('rule')->default(1);
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
