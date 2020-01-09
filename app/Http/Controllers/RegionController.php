@@ -87,8 +87,7 @@ class RegionController extends Controller
     public function update(Request $request, Region $region)
     {
         $request->validate([
-            'name' => 'required|string|max:190|'.Rule::unique('regions')->ignore($region->id)
-                    ->where('city_id', $request->city_id),
+            'name' => 'required|string|unique:regions,name,'.$region->id,'|max:190|',
             'city_id' => 'required|exists:cities,id',
         ]);
 
