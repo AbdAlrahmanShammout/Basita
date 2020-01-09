@@ -52,8 +52,8 @@
                             </a>
                             <form method="delete" action="{{route('city.delete',$item->id)}}"></form>
                             <button type="submit" class="btn btn-sm btn-clean btn-icon btn-icon-md">
-                                <butt class="la la-trash"></button>
-                            </a>
+                                <i class="la la-trash"></i>
+                            </button>
                         </td>
                     </tr>
                     @endforeach
