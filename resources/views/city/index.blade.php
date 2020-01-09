@@ -50,7 +50,7 @@
                                 class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit">
                                 <i class="la la-edit"></i>
                             </a>
-                            <form method="delete" action="{{route('city.delete',$item->id)}}"></form>
+                            <form style="display: inline-block" method="delete" action="{{route('city.delete',$item->id)}}"></form>
                             <button type="submit" class="btn btn-sm btn-clean btn-icon btn-icon-md">
                                 <i class="la la-trash"></i>
                             </button>
