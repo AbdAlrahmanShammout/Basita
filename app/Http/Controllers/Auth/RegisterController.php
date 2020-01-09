@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\City;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Auth\Events\Registered;
@@ -22,7 +23,9 @@ class RegisterController extends Controller
      */
     public function showRegistrationForm()
     {
-        return view('register');
+        $listCity = City::all();
+        $listCity = City::all();
+        return view('register', compact('listCity', ''));
     }
 
 
