@@ -106,8 +106,6 @@
           font-size: 1.1rem;
           font-weight: 500; }
 
-.kt-login.kt-login--v2.kt-login--signin .kt-login__signup {
-  display: none; }
 
 .kt-login.kt-login--v2.kt-login--signin .kt-login__signin {
   display: block; }

@@ -44,7 +44,7 @@
 <!-- begin::Body -->
 
 <body
-    class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
+    class="kt-quick-panel--right kt-demo-panel--right kt-falsecanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
 
     <!-- begin:: Page -->
     <div class="kt-grid kt-grid--ver kt-grid--root">
@@ -59,23 +59,24 @@
                                 <div class="kt-login__desc">Enter your details to create your account:</div>
                             </div>
                             <form class="kt-login__form kt-form" action="">
-                                <div class="row form-group">
+                                <input autocomplete="false" name="hidden" type="text" style="display:none;">
+                                <div class="row form-group mb-0">
                                     <div class="col-lg-6">
                                         <input class="form-control" type="text" placeholder="first name"
-                                            name="first-name" autocomplete="off">
+                                            name="first-name" autocomplete="false">
                                     </div>
                                     <div class="col-lg-6">
                                         <input class="form-control" type="text" placeholder="last name" name="last-name"
-                                            autocomplete="off">
+                                            autocomplete="false">
                                     </div>
                                 </div>
-                                <div class="row form-group">
+                                <div class="row form-group mb-0">
                                     <div class="col-12">
                                         <input class="form-control" type="text" placeholder="Email" name="email"
-                                            autocomplete="off">
+                                            autocomplete="false">
                                     </div>
                                 </div>
-                                <div class="row form-group">
+                                <div class="row form-group mb-0">
                                     <div class="col-lg-6">
                                         <select class="kt-selectpicker form-control p-0 mb-0" title="Gender">
                                             <option>male</option>
@@ -85,11 +86,30 @@
                                         <input type="text" class="form-control" id="birth_datepicker" readonly
                                             placeholder="Birth Date" /> </div>
                                 </div>
-                                
-                                <div class="row form-group">
+
+                                <div class="row form-group mb-0">
                                     <div class="col-12">
-                                        <input class="form-control" type="text" placeholder="phone number" name="phone-number"
-                                            autocomplete="off">
+                                        <input class="form-control" type="text" placeholder="phone number"
+                                            name="phone-number" autocomplete="false">
+                                    </div>
+                                </div>
+
+                                <div class="row form-group mb-0">
+                                    <div class="col-lg-6">
+                                        <select class="form-control kt-selectpicker p-0" id="selectUser" name="city_id"
+                                            title="Please select city" required focus>
+                                            @foreach($listCities as $city)
+                                            <option value="{{$city->id}}">{{ $city->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <select class="form-control kt-selectpicker p-0" id="selectUser" name="city_id"
+                                            title="Please select region" required focus>
+                                            @foreach($listRegions as $region)
+                                            <option value="{{$region->id}}">{{ $region->name }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
 
@@ -99,16 +119,6 @@
                                 <div class="input-group">
                                     <input class="form-control" type="password" placeholder="Confirm Password"
                                         name="rpassword">
-                                </div>
-                                <div class="row kt-login__extra">
-                                    <div class="col kt-align-left">
-                                        <label class="kt-checkbox">
-                                            <input type="checkbox" name="agree">I Agree the <a href="#"
-                                                class="kt-link kt-login__link kt-font-bold">terms and conditions</a>.
-                                            <span></span>
-                                        </label>
-                                        <span class="form-text text-muted"></span>
-                                    </div>
                                 </div>
                                 <div class="kt-login__actions">
                                     <button id="kt_login_signup_submit" class="btn btn-pill kt-login__btn-primary">Sign

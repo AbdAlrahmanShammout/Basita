@@ -84,11 +84,6 @@
 @section('page-level-js')
 <script>
     $(document).ready(function () {
-        $(".selectpicker").selectpicker();
-        $(".bootstrap-select").on('click',function () {
-            console.log("teasdsad")
-         $(this).addClass("open");
-    });
   });
 </script>
 @endsection
