@@ -129,7 +129,7 @@ window.BalloonEditor = __webpack_require__(/*! @ckeditor/ckeditor5-build-balloon
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/kareem/Desktop/ejad ssd/titanium/resources/webpack/vendors/custom/ckeditor-balloon.js */"./resources/webpack/vendors/custom/ckeditor-balloon.js");
+module.exports = __webpack_require__(/*! /home/kareem/Desktop/ejad ssd/Basita/resources/webpack/vendors/custom/ckeditor-balloon.js */"./resources/webpack/vendors/custom/ckeditor-balloon.js");
 
 
 /***/ })

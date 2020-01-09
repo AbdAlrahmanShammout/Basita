@@ -47266,7 +47266,7 @@ __webpack_require__(/*! datatables.net-select-bs4/css/select.bootstrap4.min.css 
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/kareem/Desktop/ejad ssd/titanium/resources/webpack/vendors/custom/datatables.js */"./resources/webpack/vendors/custom/datatables.js");
+module.exports = __webpack_require__(/*! /home/kareem/Desktop/ejad ssd/Basita/resources/webpack/vendors/custom/datatables.js */"./resources/webpack/vendors/custom/datatables.js");
 
 
 /***/ })

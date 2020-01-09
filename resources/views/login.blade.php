@@ -6,7 +6,7 @@
 <head>
     <base href="../../../">
     <meta charset="utf-8" />
-    <title>Titanium | Login</title>
+    <title>Basita | Login</title>
     <meta name="description" content="Login page example">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -170,8 +170,8 @@
                             <span class="kt-login__account-msg">
                                 Don't have an account yet ?
                             </span>&nbsp;&nbsp;
-                            <a href="javascript:;" id="kt_login_signup"
-                                class="kt-link kt-link--light kt-login__account-link">Sign Up</a>
+                        <a href="{{route('register')}}" id="kt_login_signup"
+                            class="kt-link kt-link--light kt-login__account-link">Sign Up</a>
                         </div>
                     </div>
                 </div>
