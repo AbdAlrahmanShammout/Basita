@@ -57,7 +57,7 @@
                             <div class="kt-login__head">
                                 <h3 class="kt-login__title">Sign In To Basita</h3>
                             </div>
-                            <form class="kt-form" method="get" action="{{route('Auth.showRegistrationForm')}}">
+                            <form class="kt-form" method="post" action="{{route('Auth.login')}}">
                                 <div class="input-group">
                                     <input class="form-control" type="text" placeholder="Email" name="email"
                                         autocomplete="off">
@@ -158,8 +158,9 @@
                                         id="kt_email" autocomplete="off">
                                 </div>
                                 <div class="kt-login__actions">
+
                                     <button id="kt_login_forgot_submit"
-                                        class="btn btn-pill kt-login__btn-primary">Request</button>&nbsp;&nbsp;
+                                            class="btn btn-pill kt-login__btn-primary">Request</button>&nbsp;&nbsp;
                                     <button id="kt_login_forgot_cancel"
                                         class="btn btn-pill kt-login__btn-secondary">Cancel</button>
                                 </div>
@@ -169,7 +170,7 @@
                             <span class="kt-login__account-msg">
                                 Don't have an account yet ?
                             </span>&nbsp;&nbsp;
-                        <a href="" id="kt_login_signup"
+                        <a  href="{{route('Auth.showRegistrationForm')}}" id="kt_login_signup"
                             class="kt-link kt-link--light kt-login__account-link">Sign Up</a>
                         </div>
                     </div>

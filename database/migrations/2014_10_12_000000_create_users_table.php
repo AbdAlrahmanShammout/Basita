@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('mobile_number', 10);
             $table->bigInteger('city_id')->unsigned();
             $table->bigInteger('region_id')->unsigned();
-            $table->text('img_profile');
+            $table->text('img_profile')->default("img path");
             $table->string('password');
             $table->string('activity_code');
             $table->integer('rule');
