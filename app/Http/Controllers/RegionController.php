@@ -73,7 +73,8 @@ class RegionController extends Controller
      */
     public function edit(Region $region)
     {
-        return view('region2.edit',compact('region'));
+        $cities = City::all();
+        return view('region2.edit',compact('region', 'cities'));
     }
 
     /**

@@ -68,6 +68,7 @@ class CityController extends Controller
      */
     public function edit(City $city)
     {
+
         return view('city.edit',compact('city'));
     }
 
