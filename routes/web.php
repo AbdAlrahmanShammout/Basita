@@ -13,26 +13,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/login', function () {
-    return view('login');
-});
-
-Route::get('/services-types', function () {
-    return view('servicesTypes.list');
-});
-Route::get('/services-types-create', function () {
-    return view('servicesTypes.create');
-});
-
-
-
-
-
-
-
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('Auth.showLoginForm');
 Route::post('login', 'Auth\LoginController@login')->name('Auth.login');
 Route::post('logout', 'Auth\LoginController@logout')->name('Auth.logout');
