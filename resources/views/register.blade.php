@@ -3,6 +3,7 @@
 
 <!-- begin::Head -->
 
+
 <head>
     <base href="../../../">
     <meta charset="utf-8" />
@@ -54,11 +55,33 @@
                 <div class="kt-grid__item kt-grid__item--fluid kt-login__wrapper">
                     <div class="kt-login__container">
                         <div class="kt-login__signup">
+
+
+                        @if (count($errors) > 0)
+
+                                <div class="alert alert-solid-danger alert-bold">
+                                    @foreach ($errors->all() as $error)
+                                        <li class="alert-text">{{ $error }}</li>
+                                    @endforeach
+                                </div>
+                            @endif
+
+                            @if ($message = Session::get('success'))
+                                <div class="alert alert-solid-success alert-bold">
+                                    <div class="alert-text">{{ $message }}</div>
+                                </div>
+                            @endif
+
+
+
                             <div class="kt-login__head">
                                 <h3 class="kt-login__title">Create Account For Basita</h3>
                                 <div class="kt-login__desc">Enter your details to create your account:</div>
                             </div>
-                            <form class="kt-login__form kt-form" action="{{route("Auth.register")}}">
+
+                            <form class="kt-login__form kt-form" method="post" action="{{route("Auth.register")}}">
+                                @csrf
+
                                 <input autocomplete="false" name="hidden" type="text" style="display:none;">
                                 <div class="row form-group mb-0">
                                     <div class="col-lg-6">
