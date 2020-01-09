@@ -54,22 +54,22 @@
                 style="background-image: url(assets/media/bg/bg-1.jpg);">
                 <div class="kt-grid__item kt-grid__item--fluid kt-login__wrapper">
                     <div class="kt-login__container">
-                        <div class="kt-login__signup">
+                        <ul class="kt-login__signup">
 
 
-                        @if (count($errors) > 0)
+                            @if (count($errors) > 0)
 
-                                <div class="alert alert-solid-danger alert-bold">
-                                    @foreach ($errors->all() as $error)
-                                        <li class="alert-text">{{ $error }}</li>
-                                    @endforeach
-                                </div>
+                            <ul class="alert alert-solid-danger alert-bold flex-column">
+                                @foreach ($errors->all() as $error)
+                                <li class="alert-text align-self-start">{{ $error }}</li>
+                                @endforeach
+                            </ul>
                             @endif
 
                             @if ($message = Session::get('success'))
-                                <div class="alert alert-solid-success alert-bold">
-                                    <div class="alert-text">{{ $message }}</div>
-                                </div>
+                            <div class="alert alert-solid-success alert-bold">
+                                <div class="alert-text">{{ $message }}</div>
+                            </div>
                             @endif
 
 
@@ -101,7 +101,8 @@
                                 </div>
                                 <div class="row form-group mb-0">
                                     <div class="col-lg-6">
-                                        <select class="kt-selectpicker form-control p-0 mb-0" name="gender" title="Gender">
+                                        <select class="kt-selectpicker form-control p-0 mb-0" name="gender"
+                                            title="Gender">
                                             <option>male</option>
                                             <option>female</option>
                                         </select> </div>
@@ -144,16 +145,17 @@
                                         name="rpassword">
                                 </div>
                                 <div class="kt-login__actions">
-                                    <button type="submit" id="kt_login_signup_submit" class="btn btn-pill kt-login__btn-primary">Sign Up</button>&nbsp;&nbsp;
+                                    <button type="submit" id="kt_login_signup_submit"
+                                        class="btn btn-pill kt-login__btn-primary">Sign Up</button>&nbsp;&nbsp;
                                     <button id="kt_login_signup_cancel"
                                         class="btn btn-pill kt-login__btn-secondary">Cancel</button>
                                 </div>
                             </form>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- end:: Page -->
