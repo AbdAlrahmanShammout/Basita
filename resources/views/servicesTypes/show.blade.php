@@ -28,8 +28,6 @@
 
                                 <div class="kt-widget__subhead">
                                     <a href="#"><i class="flaticon2-new-email"></i>jason@siastudio.com</a>
-                                    <a href="#"><i class="flaticon2-calendar-3"></i>PR Manager </a>
-                                    <a href="#"><i class="flaticon2-placeholder"></i>Melbourne</a>
                                 </div>
 
                                 <div class="kt-widget__info">
@@ -104,7 +102,7 @@
                 </span>
                 <h3 class="kt-portlet__head-title">
                     {{$serviceType->name}} Providers
-                    <small>list of availabel services types</small>
+                    <small>list of available services types</small>
                 </h3>
             </div>
         </div>
