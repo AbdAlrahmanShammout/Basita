@@ -24,9 +24,9 @@ class RegisterController extends Controller
      */
     public function showRegistrationForm()
     {
-        $listCity = City::all();
-        $listRegion = Region::all();
-        return view('register', compact('listCity', 'listRegion'));
+        $listCities = City::all();
+        $listRegions = Region::all();
+        return view('register', compact('listCities', 'listRegions'));
     }
 
 
