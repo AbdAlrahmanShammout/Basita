@@ -16,7 +16,7 @@
             <div class="kt-portlet__head-toolbar">
                 <div class="kt-portlet__head-wrapper">
                     <div class="kt-portlet__head-actions">
-                        <a href="{{route('serviceType.create')}}" class="btn btn-brand btn-elevate btn-icon-sm">
+                        <a href="{{route('city.create')}}" class="btn btn-brand btn-elevate btn-icon-sm">
                             <i class="la la-plus"></i>
                             New Record
                         </a>
@@ -43,10 +43,10 @@
                         <td>{{$item->name}}</td>
                         <td>{{$item->id}}</td>
                         <td nowrap>
-                            <a href="{{route('serviceType.show',$item->id)}}" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
+                            <a href="{{route('city.show',$item->id)}}" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
                                 <i class="la la-eye"></i>
                             </a>
-                            <a href="{{route('serviceType.edit',$item->id)}}"
+                            <a href="{{route('city.edit',$item->id)}}"
                                 class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit">
                                 <i class="la la-edit"></i>
                             </a>
