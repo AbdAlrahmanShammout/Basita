@@ -156,12 +156,12 @@
                 <div class="modal-dialog modal-sm" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title text-danger id=" exampleModalLabel">Delete Service Type</h5>
+                            <h5 class="modal-title text-danger id=" exampleModalLabel">Delete city</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p>Are you sude you want to delete this service type ?</p>
+                            <p>Are you sude you want to delete this city ?</p>
                         </div>
                         <div class="modal-footer">
                             <form class="kt-form kt-form--label-right" method="delete"
