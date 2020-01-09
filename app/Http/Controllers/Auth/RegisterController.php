@@ -8,6 +8,7 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
@@ -78,6 +79,8 @@ class RegisterController extends Controller
             'last_name' => $request['last_name'],
             'gender' => $request['gender'],
             'email' => $request['email'],
+//            'birthday' => date('d-m-Y', strtotime($request['birthday'])),
+//            'birthday' => Carbon::now(),
             'birthday' => $request['birthday'],
             'mobile_number' => $request['mobile_number'],
             'city_id' => $request['city_id'],
