@@ -89,7 +89,7 @@ class RegionController extends Controller
         $request->validate([
             'name' => 'required|string|max:190|'.Rule::unique('regions')->ignore($region->id)
                     ->where('city_id', $request->city_id),
-            'city_id' => 'required|exists:regions,id',
+            'city_id' => 'required|exists:cities,id',
         ]);
 
         $region->name = $request->name;
@@ -107,5 +107,6 @@ class RegionController extends Controller
     public function destroy(Region $region)
     {
         $region->delete();
+        return back()->with('success', 'Region delete successfully.');
     }
 }

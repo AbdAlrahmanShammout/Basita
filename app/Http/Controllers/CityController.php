@@ -101,5 +101,6 @@ class CityController extends Controller
     {
         // dd("tetasda");
         $city->delete();
+        return back()->with('success', 'City delete successfully.');
     }
 }
