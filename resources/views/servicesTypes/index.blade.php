@@ -43,15 +43,16 @@
                         <td>{{$item->name}}</td>
                         <td>{{$item->id}}</td>
                         <td nowrap>
-                            <a href="{{route('serviceType.show',$item->id)}}" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
+                            <a href="{{route('serviceType.show',$item->id)}}"
+                                class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
                                 <i class="la la-eye"></i>
                             </a>
                             <a href="{{route('serviceType.edit',$item->id)}}"
                                 class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit">
                                 <i class="la la-edit"></i>
                             </a>
-                            <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" data-toggle="modal"
-                                data-target="#deleteModal" title="Delete">
+                            <a href="{{route('serviceType.delete',$item->id)}}"
+                                class="btn btn-sm btn-clean btn-icon btn-icon-md" data-toggle="modal" title="Delete">
                                 <i class="la la-trash"></i>
                             </a>
                         </td>
@@ -75,7 +76,6 @@
                         </div>
                         <div class="modal-footer">
                             <form class="kt-form kt-form--label-right" method="delete"
-                                
                                 {{-- action="{{ route('serviceType.delete',$serviceType->id)}}"> --}}
                                 @csrf
                                 <button type="reset" class="btn btn-secondary" data-dismiss="modal">Cancel</button>

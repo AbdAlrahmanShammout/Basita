@@ -23,7 +23,7 @@
             <div class="alert alert-light alert-elevate fade show" role="alert">
                 <div class="alert-icon"><i class="flaticon-warning kt-font-brand"></i></div>
                 <div class="alert-text">
-                    Please Note that you cant add new service type name that is used before <br>
+                    Please Note that you cant add new region name that is used before <br>
                     please enter unique name
                 </div>
             </div>
@@ -34,7 +34,7 @@
         <div class="kt-portlet__head">
             <div class="kt-portlet__head-label">
                 <h3 class="kt-portlet__head-title">
-                    Add New Service Type
+                    Add New region
                 </h3>
             </div>
         </div>
@@ -46,10 +46,10 @@
 
             <div class="kt-portlet__body">
                 <div class="form-group row">
-                    <label class="col-form-label col-lg-3 col-sm-12">service type name</label>
+                    <label class="col-form-label col-lg-3 col-sm-12">region name</label>
                     <div class="col-lg-6 col-md-9 col-sm-12">
                         <input type="text" name="name" class="form-control"
-                            placeholder="please enter your service type name">
+                            placeholder="please enter your region name">
                     </div>
                 </div>
                 <div class="form-group row">
