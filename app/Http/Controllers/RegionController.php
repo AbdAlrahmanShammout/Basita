@@ -19,7 +19,7 @@ class RegionController extends Controller
     {
         $per_page = Input::get('per_page',8);
         $list = Region::paginate($per_page);
-        return view('region.index', compact('list'));
+        return view('region2.index', compact('list'));
     }
 
     /**
@@ -29,8 +29,8 @@ class RegionController extends Controller
      */
     public function create()
     {
-        $list = City::all();
-        return view('region.create', compact('list'));
+        $listCites = City::all();
+        return view('region2.create', compact('listCites'));
     }
 
     /**
@@ -41,9 +41,10 @@ class RegionController extends Controller
      */
     public function store(Request $request)
     {
+
         $request->validate([
             'name' => 'required|string|unique:regions|max:190',
-            'city_id' => 'required|exists:regions,id',
+            'city_id' => 'required|exists:cities,id',
         ]);
 
         $region = new Region();
@@ -61,7 +62,7 @@ class RegionController extends Controller
      */
     public function show(Region $region)
     {
-        return view('region.show', compact('region'));
+        return view('region2.show', compact('region'));
     }
 
     /**
@@ -72,7 +73,7 @@ class RegionController extends Controller
      */
     public function edit(Region $region)
     {
-        return view('region.edit',compact('region'));
+        return view('region2.edit',compact('region'));
     }
 
     /**

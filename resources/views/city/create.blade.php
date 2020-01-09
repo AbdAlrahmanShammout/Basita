@@ -40,7 +40,7 @@
         </div>
 
         <!--begin::Form-->
-        <form class="kt-form kt-form--label-right" method="post" action="{{ route('serviceType.store') }}">
+        <form class="kt-form kt-form--label-right" method="post" action="{{ route('city.store') }}">
             @csrf
             <div class="kt-portlet__body">
                 <div class="form-group row">

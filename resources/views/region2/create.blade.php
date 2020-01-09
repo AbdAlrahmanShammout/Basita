@@ -40,8 +40,19 @@
         </div>
 
         <!--begin::Form-->
-        <form class="kt-form kt-form--label-right" method="post" action="{{ route('serviceType.store') }}">
+        <form class="kt-form kt-form--label-right" method="post" action="{{ route('region.store') }}">
             @csrf
+
+            <div class="form-group row">
+                <div class="col-sm-8">
+                    <select class="form-control" id="selectUser" name="city_id" required focus>
+                        <option value="" disabled selected>Please select user</option>
+                        @foreach($listCites as $city)
+                            <option value="{{$city->id}}">{{ $city->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+
             <div class="kt-portlet__body">
                 <div class="form-group row">
                     <label class="col-form-label col-lg-3 col-sm-12">service type name</label>

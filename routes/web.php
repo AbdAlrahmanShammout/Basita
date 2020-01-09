@@ -48,14 +48,14 @@ Route::prefix("controlPanelB")->group(function (){//middleware("checkRuleAdmin")
         Route::delete('/{city}', 'CityController@destroy')->name('city.delete');
     });
 
-    Route::prefix("city")->group(function (){
-        Route::get("/","CityController@index")->name('city.index');
-        Route::get("/create","CityController@create")->name('city.create');
-        Route::post("/","CityController@store")->name('city.store');
-        Route::get("/{city}","CityController@show")->name('city.show');
-        Route::get("/{city}/edit","CityController@edit")->name('city.edit');
-        Route::patch("/{city}","CityController@update")->name('city.update');
-        Route::delete('/{city}', 'CityController@destroy')->name('city.delete');
+    Route::prefix("region")->group(function (){
+        Route::get("/","RegionController@index")->name('region.index');
+        Route::get("/create","RegionController@create")->name('region.create');
+        Route::post("/","RegionController@store")->name('region.store');
+        Route::get("/{region}","RegionController@show")->name('region.show');
+        Route::get("/{region}/edit","RegionController@edit")->name('region.edit');
+        Route::patch("/{region}","RegionController@update")->name('region.update');
+        Route::delete('/{region}', 'RegionController@destroy')->name('region.delete');
     });
 
 
