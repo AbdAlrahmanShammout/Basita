@@ -37,11 +37,8 @@ Route::get('login', 'Auth\LoginController@showLoginForm')->name('Auth.showLoginF
 Route::post('login', 'Auth\LoginController@login')->name('Auth.login');
 Route::post('logout', 'Auth\LoginController@logout')->name('Auth.logout');
 
-
-$this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('Auth.showRegistrationForm');
-$this->post('register', 'Auth\RegisterController@register');
-
-
+Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('Auth.showRegistrationForm');
+Route::post('register', 'Auth\RegisterController@register');
 
 Route::prefix('/')->middleware('auth')->group(function (){
     Route::get('/', function (){

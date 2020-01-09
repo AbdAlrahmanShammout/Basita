@@ -23831,7 +23831,7 @@ __webpack_require__(/*! jstree/dist/themes/default/style.css */ "./node_modules/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/kareem/Desktop/ejad ssd/titanium/resources/webpack/vendors/custom/jstree.js */"./resources/webpack/vendors/custom/jstree.js");
+module.exports = __webpack_require__(/*! /home/kareem/Desktop/ejad ssd/Basita/resources/webpack/vendors/custom/jstree.js */"./resources/webpack/vendors/custom/jstree.js");
 
 
 /***/ })

@@ -73695,7 +73695,7 @@ __webpack_require__(/*! tinymce/themes/mobile/theme */ "./node_modules/tinymce/t
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/kareem/Desktop/ejad ssd/titanium/resources/webpack/vendors/custom/tinymce.js */"./resources/webpack/vendors/custom/tinymce.js");
+module.exports = __webpack_require__(/*! /home/kareem/Desktop/ejad ssd/Basita/resources/webpack/vendors/custom/tinymce.js */"./resources/webpack/vendors/custom/tinymce.js");
 
 
 /***/ })

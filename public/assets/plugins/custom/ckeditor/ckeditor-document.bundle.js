@@ -129,7 +129,7 @@ window.DecoupledEditor = __webpack_require__(/*! @ckeditor/ckeditor5-build-decou
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/kareem/Desktop/ejad ssd/titanium/resources/webpack/vendors/custom/ckeditor-document.js */"./resources/webpack/vendors/custom/ckeditor-document.js");
+module.exports = __webpack_require__(/*! /home/kareem/Desktop/ejad ssd/Basita/resources/webpack/vendors/custom/ckeditor-document.js */"./resources/webpack/vendors/custom/ckeditor-document.js");
 
 
 /***/ })
