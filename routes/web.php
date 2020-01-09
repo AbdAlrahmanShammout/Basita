@@ -35,7 +35,27 @@ Route::prefix("controlPanelB")->group(function (){//middleware("checkRuleAdmin")
         Route::get("/{serviceType}","ServiceTypeController@show")->name('serviceType.show');
         Route::get("/{serviceType}/edit","ServiceTypeController@edit")->name('serviceType.edit');
         Route::patch("/{serviceType}","ServiceTypeController@update")->name('serviceType.update');
-        Route::delete('/{serviceType}', 'ServiceTypeController@destroy')->name('role.destroy')->name('serviceType.delete');
+        Route::delete('/{serviceType}', 'ServiceTypeController@destroy')->name('serviceType.delete');
+    });
+
+    Route::prefix("city")->group(function (){
+        Route::get("/","CityController@index")->name('city.index');
+        Route::get("/create","CityController@create")->name('city.create');
+        Route::post("/","CityController@store")->name('city.store');
+        Route::get("/{city}","CityController@show")->name('city.show');
+        Route::get("/{city}/edit","CityController@edit")->name('city.edit');
+        Route::patch("/{city}","CityController@update")->name('city.update');
+        Route::delete('/{city}', 'CityController@destroy')->name('city.delete');
+    });
+
+    Route::prefix("city")->group(function (){
+        Route::get("/","CityController@index")->name('city.index');
+        Route::get("/create","CityController@create")->name('city.create');
+        Route::post("/","CityController@store")->name('city.store');
+        Route::get("/{city}","CityController@show")->name('city.show');
+        Route::get("/{city}/edit","CityController@edit")->name('city.edit');
+        Route::patch("/{city}","CityController@update")->name('city.update');
+        Route::delete('/{city}', 'CityController@destroy')->name('city.delete');
     });
 
 

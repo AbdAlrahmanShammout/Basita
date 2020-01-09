@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\City;
 use App\Region;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Validation\Rule;
 
 class RegionController extends Controller
 {
@@ -14,7 +17,9 @@ class RegionController extends Controller
      */
     public function index()
     {
-        //
+        $per_page = Input::get('per_page',8);
+        $list = Region::paginate($per_page);
+        return view('region.index', compact('list'));
     }
 
     /**
@@ -24,7 +29,8 @@ class RegionController extends Controller
      */
     public function create()
     {
-        //
+        $list = City::all();
+        return view('region.create', compact('list'));
     }
 
     /**
@@ -35,7 +41,16 @@ class RegionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|unique:regions|max:190',
+            'city_id' => 'required|exists:regions,id',
+        ]);
+
+        $region = new Region();
+        $region->name = $request->name;
+        $region->city_id = $request->city_id;
+        $region->save();
+        return back()->with('success', 'Region created successfully.');
     }
 
     /**
@@ -46,7 +61,7 @@ class RegionController extends Controller
      */
     public function show(Region $region)
     {
-        //
+        return view('region.show', compact('region'));
     }
 
     /**
@@ -57,7 +72,7 @@ class RegionController extends Controller
      */
     public function edit(Region $region)
     {
-        //
+        return view('region.edit',compact('region'));
     }
 
     /**
@@ -69,17 +84,26 @@ class RegionController extends Controller
      */
     public function update(Request $request, Region $region)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:190|'.Rule::unique('regions')->ignore($region->id)
+                    ->where('city_id', $request->city_id),
+            'city_id' => 'required|exists:regions,id',
+        ]);
+
+        $region->name = $request->name;
+        $region->save();
+        return back()->with('success', 'Region updated successfully.');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Region  $region
-     * @return \Illuminate\Http\Response
+     * @param  \App\Region $region
+     * @return void
+     * @throws \Exception
      */
     public function destroy(Region $region)
     {
-        //
+        $region->delete();
     }
 }

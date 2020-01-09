@@ -9,7 +9,7 @@ class Region extends Model
     protected $table = "regions";
 
     protected $fillable = [
-        'id',  'name'
+        'id',  'name',  'city_id'
     ];
 
     protected $primaryKey = "id";

@@ -95,11 +95,12 @@ class ServiceTypeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\ServiceType  $serviceType
-     * @return \Illuminate\Http\Response
+     * @param  \App\ServiceType $serviceType
+     * @return void
+     * @throws \Exception
      */
     public function destroy(ServiceType $serviceType)
     {
-        //
+        $serviceType->delete();
     }
 }
