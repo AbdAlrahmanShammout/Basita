@@ -170,7 +170,7 @@
                             <span class="kt-login__account-msg">
                                 Don't have an account yet ?
                             </span>&nbsp;&nbsp;
-                        <a href="{{route('register')}}" id="kt_login_signup"
+                        <a href="" id="kt_login_signup"
                             class="kt-link kt-link--light kt-login__account-link">Sign Up</a>
                         </div>
                     </div>
