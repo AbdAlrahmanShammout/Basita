@@ -58,6 +58,8 @@
                                 <h3 class="kt-login__title">Sign In To Basita</h3>
                             </div>
                             <form class="kt-form" method="post" action="{{route('Auth.login')}}">
+                                
+                                @csrf
                                 <div class="input-group">
                                     <input class="form-control" type="text" placeholder="Email" name="email"
                                         autocomplete="off">

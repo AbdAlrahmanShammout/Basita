@@ -15,7 +15,7 @@
                             <div class="kt-widget__content">
                                 <div class="kt-widget__head">
                                     <a href="#" class="kt-widget__username">
-                                        {{$serviceType->name}}
+                                        {{$city->name}}
                                         <i class="flaticon2-correct"></i>
                                     </a>
 
@@ -101,8 +101,8 @@
                     <i class="kt-font-brand flaticon2-line-chart"></i>
                 </span>
                 <h3 class="kt-portlet__head-title">
-                    {{$serviceType->name}} Providers
-                    <small>list of available services types</small>
+                    Providers in {{$city->name}} 
+                    <small>list of available cities</small>
                 </h3>
             </div>
         </div>
@@ -137,7 +137,7 @@
                     {{--<td nowrap> <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">--}}
                     {{--<i class="la la-eye"></i>--}}
                     {{--</a>--}}
-                    {{--<a href="{{route('serviceType.edit',$item->id)}}"--}}
+                    {{--<a href="{{route('city.edit',$item->id)}}"--}}
                     {{--class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit">--}}
                     {{--<i class="la la-edit"></i>--}}
                     {{--</a>--}}
@@ -165,7 +165,7 @@
                         </div>
                         <div class="modal-footer">
                             <form class="kt-form kt-form--label-right" method="delete"
-                                {{-- action="{{ route('serviceType.delete',$serviceType->id)}}"> --}}
+                                {{-- action="{{ route('city.delete',$city->id)}}"> --}}
                                 @csrf
                                 <button type="reset" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                 <button type="submit" class="btn btn-danger btn-wide">Delete</button>
