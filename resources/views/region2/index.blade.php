@@ -2,6 +2,20 @@
 
 @section('content')
 <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+    @if (count($errors) > 0)
+
+    <div class="alert alert-solid-danger alert-bold">
+        @foreach ($errors->all() as $error)
+        <li class="alert-text">{{ $error }}</li>
+        @endforeach
+    </div>
+    @endif
+
+    @if ($message = Session::get('success'))
+    <div class="alert alert-solid-success alert-bold">
+        <div class="alert-text">{{ $message }}</div>
+    </div>
+    @endif
     <div class="kt-portlet kt-portlet--mobile">
         <div class="kt-portlet__head kt-portlet__head--lg">
             <div class="kt-portlet__head-label">
@@ -15,17 +29,17 @@
             </div>
             @if (count($errors) > 0)
 
-                <div class="alert alert-solid-danger alert-bold">
-                    @foreach ($errors->all() as $error)
-                        <li class="alert-text">{{ $error }}</li>
-                    @endforeach
-                </div>
+            <div class="alert alert-solid-danger alert-bold">
+                @foreach ($errors->all() as $error)
+                <li class="alert-text">{{ $error }}</li>
+                @endforeach
+            </div>
             @endif
 
             @if ($message = Session::get('success'))
-                <div class="alert alert-solid-success alert-bold">
-                    <div class="alert-text">{{ $message }}</div>
-                </div>
+            <div class="alert alert-solid-success alert-bold">
+                <div class="alert-text">{{ $message }}</div>
+            </div>
             @endif
 
             <div class="kt-portlet__head-toolbar">
@@ -66,43 +80,18 @@
                                 class="btn btn-sm btn-clean btn-icon btn-icon-md" title="Edit">
                                 <i class="la la-edit"></i>
                             </a>
-                            <a href="{{route('serviceType.delete',$item->id)}}"
-                                class="btn btn-sm btn-clean btn-icon btn-icon-md" data-toggle="modal" title="Delete">
-                                <i class="la la-trash"></i>
-                            </a>
-                        </td>
+                            <form class="d-inline-block" method="post" action="{{route('region.delete',$item->id)}}">
+                                @method('delete')
+                                @csrf
+                                <button type="submit" class="btn btn-sm btn-clean btn-icon btn-icon-md">
+                                    <i class="la la-trash"></i>
+                                </button>
+                            </form>
+ </td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
-
-            <!--begin::Modal-->
-            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-sm" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title text-danger id=" exampleModalLabel">Delete Service Type</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Are you sude you want to delete this service type ?</p>
-                        </div>
-                        <div class="modal-footer">
-                            <form class="kt-form kt-form--label-right" method="delete"
-                                {{-- action="{{ route('serviceType.delete',$serviceType->id)}}"> --}}
-                                @csrf
-                                <button type="reset" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-danger btn-wide">Delete</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--end::Modal-->
-
 
             <!--end: Datatable -->
         </div>
