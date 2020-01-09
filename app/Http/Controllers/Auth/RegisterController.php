@@ -68,7 +68,8 @@ class RegisterController extends Controller
             'city_id' => 'exists:cities,id',
             'region_id' => 'exists:regions,id',
 //            'first_name' => 'required|string|max:190',
-            'password' => 'required|string',
+            'password' => 'required|string|min:8',
+            'rpassword' => 'required_with:password|same:password|min:8',
         ]);
 
         $newUser = User::create([

@@ -44,7 +44,7 @@
 <!-- begin::Body -->
 
 <body
-    class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
+    class="kt-quick-panel--right kt-demo-panel--right kt-falsecanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--fixed kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
 
     <!-- begin:: Page -->
     <div class="kt-grid kt-grid--ver kt-grid--root">
@@ -53,73 +53,63 @@
                 style="background-image: url(assets/media/bg/bg-1.jpg);">
                 <div class="kt-grid__item kt-grid__item--fluid kt-login__wrapper">
                     <div class="kt-login__container">
-                        <div class="kt-login__signin">
-                            <div class="kt-login__head">
-                                <h3 class="kt-login__title">Sign In To Basita</h3>
-                            </div>
-                            <form class="kt-form" action="">
-                                <div class="input-group">
-                                    <input class="form-control" type="text" placeholder="Email" name="email"
-                                        autocomplete="off">
-                                </div>
-                                <div class="input-group">
-                                    <input class="form-control" type="password" placeholder="Password" name="password">
-                                </div>
-                                <div class="row kt-login__extra">
-                                    <div class="col">
-                                        <label class="kt-checkbox">
-                                            <input type="checkbox" name="remember"> Remember me
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                    <div class="col kt-align-right">
-                                        <a href="javascript:;" id="kt_login_forgot"
-                                            class="kt-link kt-login__link">Forget Password ?</a>
-                                    </div>
-                                </div>
-                                <div class="kt-login__actions">
-                                    <button id="kt_login_signin_submit" class="btn btn-pill kt-login__btn-primary">Sign
-                                        In</button>
-                                </div>
-                            </form>
-                        </div>
                         <div class="kt-login__signup">
                             <div class="kt-login__head">
                                 <h3 class="kt-login__title">Create Account For Basita</h3>
                                 <div class="kt-login__desc">Enter your details to create your account:</div>
                             </div>
-                            <form class="kt-login__form kt-form" action="">
-                                <div class="row form-group">
+                            <form class="kt-login__form kt-form" action="{{route("Auth.register")}}">
+                                <input autocomplete="false" name="hidden" type="text" style="display:none;">
+                                <div class="row form-group mb-0">
                                     <div class="col-lg-6">
                                         <input class="form-control" type="text" placeholder="first name"
-                                            name="first-name" autocomplete="off">
+                                            name="first_name" autocomplete="false">
                                     </div>
                                     <div class="col-lg-6">
-                                        <input class="form-control" type="text" placeholder="last name" name="last-name"
-                                            autocomplete="off">
+                                        <input class="form-control" type="text" placeholder="last name" name="last_name"
+                                            autocomplete="false">
                                     </div>
                                 </div>
-                                <div class="row form-group">
+                                <div class="row form-group mb-0">
                                     <div class="col-12">
                                         <input class="form-control" type="text" placeholder="Email" name="email"
-                                            autocomplete="off">
+                                            autocomplete="false">
                                     </div>
                                 </div>
-                                <div class="row form-group">
+                                <div class="row form-group mb-0">
                                     <div class="col-lg-6">
-                                        <select class="kt-selectpicker form-control p-0 mb-0" title="Gender">
+                                        <select class="kt-selectpicker form-control p-0 mb-0" name="gender" title="Gender">
                                             <option>male</option>
                                             <option>female</option>
                                         </select> </div>
                                     <div class="col-lg-6">
                                         <input type="text" class="form-control" id="birth_datepicker" readonly
-                                            placeholder="Birth Date" /> </div>
+                                            placeholder="Birth Date" name="birthday" /> </div>
                                 </div>
-                                
-                                <div class="row form-group">
+
+                                <div class="row form-group mb-0">
                                     <div class="col-12">
-                                        <input class="form-control" type="text" placeholder="phone number" name="phone-number"
-                                            autocomplete="off">
+                                        <input class="form-control" type="text" placeholder="phone number"
+                                            name="mobile_number" autocomplete="false">
+                                    </div>
+                                </div>
+
+                                <div class="row form-group mb-0">
+                                    <div class="col-lg-6">
+                                        <select class="form-control kt-selectpicker p-0" name="city_id"
+                                            title="Please select city" required focus>
+                                            @foreach($listCities as $city)
+                                            <option value="{{$city->id}}">{{ $city->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <select class="form-control kt-selectpicker p-0" name="region_id"
+                                            title="Please select region" required focus>
+                                            @foreach($listRegions as $region)
+                                            <option value="{{$region->id}}">{{ $region->name }}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
 
@@ -130,49 +120,12 @@
                                     <input class="form-control" type="password" placeholder="Confirm Password"
                                         name="rpassword">
                                 </div>
-                                <div class="row kt-login__extra">
-                                    <div class="col kt-align-left">
-                                        <label class="kt-checkbox">
-                                            <input type="checkbox" name="agree">I Agree the <a href="#"
-                                                class="kt-link kt-login__link kt-font-bold">terms and conditions</a>.
-                                            <span></span>
-                                        </label>
-                                        <span class="form-text text-muted"></span>
-                                    </div>
-                                </div>
                                 <div class="kt-login__actions">
-                                    <button id="kt_login_signup_submit" class="btn btn-pill kt-login__btn-primary">Sign
-                                        Up</button>&nbsp;&nbsp;
+                                    <button type="submit" id="kt_login_signup_submit" class="btn btn-pill kt-login__btn-primary">Sign Up</button>&nbsp;&nbsp;
                                     <button id="kt_login_signup_cancel"
                                         class="btn btn-pill kt-login__btn-secondary">Cancel</button>
                                 </div>
                             </form>
-                        </div>
-                        <div class="kt-login__forgot">
-                            <div class="kt-login__head">
-                                <h3 class="kt-login__title">Forgotten Password ?</h3>
-                                <div class="kt-login__desc">Enter your email to reset your password:</div>
-                            </div>
-                            <form class="kt-form" action="">
-                                <div class="input-group">
-                                    <input class="form-control" type="text" placeholder="Email" name="email"
-                                        id="kt_email" autocomplete="off">
-                                </div>
-                                <div class="kt-login__actions">
-                                    <button id="kt_login_forgot_submit"
-                                        class="btn btn-pill kt-login__btn-primary">Request</button>&nbsp;&nbsp;
-                                    <button id="kt_login_forgot_cancel"
-                                        class="btn btn-pill kt-login__btn-secondary">Cancel</button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="kt-login__account">
-                            <span class="kt-login__account-msg">
-                                Don't have an account yet ?
-                            </span>&nbsp;&nbsp;
-                            <a href="" id="kt_login_signup"
-                            class="kt-link kt-link--light kt-login__account-link">Sign Up</a>
-                            class="kt-link kt-link--light kt-login__account-link">Sign Up</a>
                         </div>
                     </div>
                 </div>

@@ -82,6 +82,7 @@
                                 </div>
                             </form>
                         </div>
+<<<<<<< HEAD
                         <div class="kt-login__signup">
                             <div class="kt-login__head">
                                 <h3 class="kt-login__title">Create Account For Basita</h3>
@@ -166,12 +167,19 @@
                                 </div>
                             </form>
                         </div>
+=======
+>>>>>>> 008b9a3f7783edca6fa4f1a002d6bb6f1c961676
                         <div class="kt-login__account">
                             <span class="kt-login__account-msg">
                                 Don't have an account yet ?
                             </span>&nbsp;&nbsp;
+<<<<<<< HEAD
                         <a  href="{{route('Auth.showRegistrationForm')}}" id="kt_login_signup"
                             class="kt-link kt-link--light kt-login__account-link">Sign Up</a>
+=======
+                            <a href="" id="kt_login_signup" class="kt-link kt-link--light kt-login__account-link">Sign
+                                Up</a>
+>>>>>>> 008b9a3f7783edca6fa4f1a002d6bb6f1c961676
                         </div>
                     </div>
                 </div>
